@@ -96,7 +96,7 @@ useEffect(() => {
 
   saveTasks();
 
-}, [tasks, loaded, session, dayOffset]);
+}, [tasks, loaded, session]);
 
 // Time updater
 useEffect(() => {
