@@ -78,6 +78,8 @@ useEffect(() => {
 
   if (!loaded || !session) return;
 
+  if (!tasks) return;
+
   const saveTasks = async () => {
 
     await fetch("/api/tasks", {
@@ -96,7 +98,7 @@ useEffect(() => {
 
   saveTasks();
 
-}, [tasks, loaded, session]);
+}, [tasks]);
 
 // Time updater
 useEffect(() => {
