@@ -75,6 +75,8 @@ useEffect(() => {
 
   if (!mounted || !session) return;
 
+  if (tasks.length === 0) return;   // ⭐ prevent overwriting with empty array
+
   const saveTasks = async () => {
 
     await fetch("/api/tasks", {
