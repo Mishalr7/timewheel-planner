@@ -27,6 +27,7 @@ const [startMinute, setStartMinute] = useState("");
 
 const [durationHour, setDurationHour] = useState("");
 const [durationMinute, setDurationMinute] = useState("");
+const [loaded, setLoaded] = useState(false);
 
 const [now, setNow] = useState(null);
 const getDateString = (offset = 0) => {
@@ -50,6 +51,7 @@ useEffect(() => {
     if (!session) {
       setTasks([]);
       setMounted(true);
+      setLoaded(true);
       return;
     }
 
@@ -63,6 +65,7 @@ useEffect(() => {
 
     setTasks(data.tasks || []);
     setMounted(true);
+    setLoaded(true);
 
   };
 
@@ -73,9 +76,7 @@ useEffect(() => {
 // Save tasks
 useEffect(() => {
 
-  if (!mounted || !session) return;
-
-  if (tasks.length === 0) return;   // ⭐ prevent overwriting with empty array
+  if (!loaded || !session) return;
 
   const saveTasks = async () => {
 
@@ -95,7 +96,7 @@ useEffect(() => {
 
   saveTasks();
 
-}, [tasks, mounted, session, dayOffset]);
+}, [tasks, loaded, session, dayOffset]);
 
 // Time updater
 useEffect(() => {
