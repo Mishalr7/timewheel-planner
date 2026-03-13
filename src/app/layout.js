@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "TimeWheel Planner",
   description: "A radial daily planning tool",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }) {
