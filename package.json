@@ -2,6 +2,7 @@
   "name": "timewheel",
   "version": "0.1.0",
   "private": true,
+  "installCommand": "npm install --legacy-peer-deps",
 "scripts": {
   "dev": "next dev",
   "build": "next build --webpack",
