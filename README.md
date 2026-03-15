@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TimeWheel Planner
+
+TimeWheel Planner is a visual daily planning web app that helps you organize your entire day using a circular 24‑hour timeline. Instead of a traditional list of tasks, your schedule is displayed as a wheel so you can instantly see how your time is distributed.
+
+This project is built with **Next.js** and designed to provide a simple, interactive way to plan daily activities, track time blocks, and visualize your routine.
+
+---
+
+## Live Demo
+
+Try the app here:
+
+[https://timewheel-planner.vercel.app/](https://timewheel-planner.vercel.app/)
+
+---
+
+## Features
+
+* 24‑hour circular time visualization
+* Add tasks with custom start times
+* Define task duration easily
+* Visual schedule representation
+* Real‑time updates when tasks are added
+* Simple and minimal UI
+
+---
+
+## Tech Stack
+
+* Next.js
+* React
+* JavaScript
+* MongoDB (for storing user data and tasks)
+* Vercel (deployment)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+cd timewheel-planner
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
-# or
+```
+
+or
+
+```bash
 yarn dev
-# or
+```
+
+or
+
+```bash
 pnpm dev
-# or
+```
+
+or
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Open the application
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open your browser and go to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[http://localhost:3000](http://localhost:3000)
 
-## Learn More
+The page will automatically update when you edit files.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+/app
+  page.js        Main application UI
+/components      Reusable UI components
+/lib             Utility functions
+/styles          Styling files
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Editing the App
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can start editing the main page here:
+
+```
+app/page.js
+```
+
+Next.js will automatically reload the page whenever changes are saved.
+
+---
+
+## Deployment
+
+The easiest way to deploy this project is using **Vercel**.
+
+Steps:
+
+1. Push the project to GitHub
+2. Connect the repository to Vercel
+3. Deploy
+
+Vercel automatically builds and hosts the Next.js application.
+
+---
+
+## Future Improvements
+
+* User authentication
+* Analytics for tracking usage
+* Task completion tracking
+* Mobile optimization
+* Weekly planning view
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
